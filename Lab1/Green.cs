@@ -1,4 +1,4 @@
-﻿namespace Lab1
+namespace Lab1
 {
     public class Green
     {
@@ -7,7 +7,7 @@
             bool answer = false;
 
             // code here
-
+            answer = Math.Abs(d) >= 1;
             // end
 
             return answer;
@@ -17,7 +17,7 @@
             bool answer = false;
 
             // code here
-
+            answer = ((d + f) / 2) > 0;
             // end
 
             return answer;
@@ -27,7 +27,7 @@
             bool answer = false;
 
             // code here
-
+            answer = (a + b) > ((a + b) / 2);
             // end
 
             return answer;
@@ -37,7 +37,7 @@
             int answer = 0;
 
             // code here
-
+            answer = Math.Max(a, Math.Max(b, c));
             // end
 
             return answer;
@@ -47,7 +47,7 @@
             double answer = 0;
 
             // code here
-
+            answer = (Math.Abs(x) > 1 ? 0 : x * x - 1);
             // end
 
             return answer;
@@ -57,7 +57,14 @@
             bool answer = false;
 
             // code here
-
+            if(x < 0)
+            {
+                answer = (1 + x >= y) && (y >= 0);
+            }
+            else
+            {
+                answer = (1 - x >= y) && (y >= 0);
+            }
             // end
 
             return answer;
@@ -68,7 +75,7 @@
             bool answer = true;
 
             // code here
-
+            answer = !(n < 0 || n % 2 == 0);
             // end
 
             return answer;
@@ -78,7 +85,17 @@
             bool answer = false;
 
             // code here
-
+            int now = 10 * 60;
+            if (X < 7)
+            {
+                answer = false;
+            }
+            else
+            {
+                now = 10 * 60 - 7 * 60 + (X / 2 + X % 2) * Y;
+                if(7 * 60 <= now && now <= 9 * 60) answer = true;
+            }
+            Console.WriteLine($"{X}, {Y}, {answer}");
             // end
 
             return answer;
